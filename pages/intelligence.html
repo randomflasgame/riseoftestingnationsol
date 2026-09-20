@@ -6,40 +6,64 @@
 <title>LAGEZENTRUM // RISE OF NATIONS</title>
 <link rel="stylesheet" href="../style.css">
 <script src="../config/site-config.js"></script>
-
+<script src="../data/news.js"></script>
+<style>
+.intel-top{display:grid;grid-template-columns:1.5fr .9fr;gap:14px;margin-top:22px}
+.breaking{min-height:300px;border-color:#315a72;background:linear-gradient(135deg,rgba(11,31,43,.96),rgba(5,13,19,.96));overflow:hidden}
+.breaking.red{border-color:#713636}.breaking.gold{border-color:#6d5a2a}.breaking:after{content:"";position:absolute;inset:auto -40px -60px auto;width:220px;height:220px;border:1px solid rgba(75,185,241,.12);transform:rotate(45deg)}
+.news-cat{display:inline-block;padding:5px 8px;border:1px solid #31566b;color:#9cc8dc;font:10px Consolas,"Courier New",monospace;letter-spacing:.12em}
+.news-cat.rot{border-color:#713636;color:#ff8585}.news-cat.gold{border-color:#6d5a2a;color:#e6c46d}
+.breaking h2{font-size:clamp(28px,4vw,48px);margin:18px 0 12px;letter-spacing:.05em}.breaking p{max-width:850px;font-size:15px;line-height:1.7}
+.meta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;color:#688696;font:10px Consolas,"Courier New",monospace;letter-spacing:.08em}
+.market-panel{padding:0;overflow:hidden}.market-head{padding:16px 18px;border-bottom:1px solid #173e53;display:flex;justify-content:space-between}.market-list{padding:8px 18px 16px}
+.market-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:10px 0;border-bottom:1px solid #102f40;font-family:Consolas,"Courier New",monospace;font-size:12px}.market-row:last-child{border-bottom:0}.up{color:#72d69a}.down{color:#df6969}
+.ticker{margin-top:20px;border:1px solid #173e53;background:#06141c;overflow:hidden;white-space:nowrap}.ticker-track{display:inline-block;padding:11px 0;animation:ticker 38s linear infinite}.ticker-item{display:inline-block;margin:0 28px;font:11px Consolas,"Courier New",monospace}.ticker-item strong{color:#9edfff}@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.controlbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:20px}.controlbar select,.controlbar button{padding:10px 12px;border:1px solid #24516a;background:#06141c;color:#cbe5f2}.controlbar button{cursor:pointer}.controlbar button:hover{border-color:#4bb9f1;color:#fff}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px}.news-card{min-height:220px}.news-card h3{margin:14px 0 9px;font-size:18px;line-height:1.25}.news-card p{font-size:12px}.pulse-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#72d69a;box-shadow:0 0 10px #72d69a;margin-right:7px;animation:pulse 1.4s ease-in-out infinite}@keyframes pulse{50%{opacity:.3}}
+.archive{margin-top:18px}.archive-row{display:grid;grid-template-columns:110px 145px 1fr 100px;gap:12px;padding:11px 12px;border-bottom:1px solid #123447;background:#06131a;align-items:center}.archive-row:hover{background:#0a1c26}.archive-cat,.archive-time,.archive-region{font:10px Consolas,"Courier New",monospace;color:#7191a2}.archive-title{font-size:12px;color:#cfe2ec}.fiction-note{margin-top:18px;color:#738b98;font-size:10px;line-height:1.55}
+@media(max-width:950px){.intel-top{grid-template-columns:1fr}.news-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.news-grid{grid-template-columns:1fr}.archive-row{grid-template-columns:90px 1fr}.archive-region,.archive-time{display:none}}
+</style>
 </head>
 <body>
-
 <header class="ron-header">
   <a href="../index.html" class="ron-brand">RISE OF NATIONS<span>COMMAND NETWORK</span></a>
   <nav class="ron-nav" aria-label="Hauptnavigation">
-    <a href="../index.html">HOME / BEFEHLSZENTRALE</a>
-    <a href="communications.html">KOMMUNIKATION</a>
-    <a href="intelligence.html">LAGEZENTRUM</a>
-    <a href="server.html">SERVER</a>
-    <a href="database.html">DATENBANK</a>
-    <a href="download.html">DOWNLOAD</a>
-    <a href="wiki.html">WIKI</a>
-    <a href="faq.html">FAQ</a>
+    <a href="../index.html">HOME / BEFEHLSZENTRALE</a><a href="communications.html">KOMMUNIKATION</a><a class="active" href="intelligence.html">LAGEZENTRUM</a><a href="server.html">SERVER</a><a href="database.html">DATENBANK</a><a href="download.html">DOWNLOAD</a><a href="wiki.html">WIKI</a><a href="faq.html">FAQ</a>
   </nav>
 </header>
-
 <main class="wrap">
-<section class="hero">
-  <div class="eyebrow">LAGEERFASSUNG // ALLGEMEINE MELDUNGEN</div>
-  <h1>LAGEZENTRUM</h1>
-  <p>Allgemeine Lage- und Systemmeldungen ohne feste Bindung an eine einzelne Spielernation.</p>
+<section class="hero"><div class="eyebrow"><span class="pulse-dot"></span>LAGEERFASSUNG // LIVE-SIMULATION</div><h1>LAGEZENTRUM</h1><p>Dynamisches Minecraft-Nachrichtennetz mit Marktbewegungen, Konflikten, Industrie-, Sicherheits-, Technologie- und Expeditionsmeldungen aus einer fiktiven Weltlage.</p></section>
+
+<div class="ticker"><div class="ticker-track" id="ticker"></div></div>
+
+<section class="intel-top">
+  <article class="card breaking" id="lead"><span class="news-cat" id="leadcat">EILMELDUNG</span><h2 id="leadtitle">LAGE WIRD GELADEN ...</h2><p id="leadtext">Nachrichtennetz wird synchronisiert.</p><div class="meta"><span id="leadregion">REGION // -</span><span id="leadsource">QUELLE // -</span><span id="leadtime">ZEIT // -</span></div></article>
+  <aside class="card market-panel"><div class="market-head"><span class="label">AKTIEN- & ROHSTOFFMARKT</span><span class="code">LIVE // SIM</span></div><div class="market-list" id="market"></div></aside>
 </section>
 
-<section class="grid three">
-  <div class="card"><div class="label">AKTUELLE LAGE</div><h3>BEFEHLSNETZ EINSATZBEREIT</h3><p>Die Website führt Server-, Modpack- und Wissensdaten in einer gemeinsamen Oberfläche zusammen.</p></div>
-  <div class="card"><div class="label">WELTLAGE</div><h3>NEUE ENTWICKLUNGEN</h3><p>Dieser Bereich ist für allgemeine, nationsunabhängige Meldungen vorgesehen.</p></div>
-  <div class="card"><div class="label">SYSTEMMELDUNG</div><h3>DATENBESTAND 5.0.0</h3><p>Der dokumentierte Modpack-Stand ist Version 5.0.0.</p></div>
-</section>
-<div class="notice">Keine festen Nationen werden hier als dauerhafte Lore vorausgesetzt. Nationen können abhängig von den Spielern entstehen, sich verändern oder verschwinden.</div>
-
-<div class="footer">RISE OF NATIONS // COMMAND NETWORK // MINECRAFT 1.21.1 // MODPACK 5.0.0</div>
+<div class="controlbar"><select id="category"><option value="ALLE">ALLE MELDUNGEN</option></select><button id="refresh">NEUE LAGE ZUSAMMENSTELLEN</button><span class="tag" id="poolcount">0 MELDUNGEN IM ARCHIV</span></div>
+<section class="news-grid" id="newsgrid"></section>
+<section class="archive"><div class="label" style="margin-bottom:10px">LAUFENDE MELDUNGEN // ARCHIV-AUSZUG</div><div id="archive"></div></section>
+<div class="fiction-note">SIMULATIONSHINWEIS // Die Meldungen, Nationen, Börsenwerte, Konflikte und Ereignisse auf dieser Seite sind fiktive Minecraft-Weltmeldungen für die Rise-of-Nations-Atmosphäre. Sie stellen keine realen Nachrichten oder realen Marktwerte dar.</div>
+<div class="footer">RISE OF NATIONS // COMMAND NETWORK // LAGEZENTRUM</div>
 </main>
-
+<script>
+(function(){
+"use strict";
+const pool=Array.isArray(window.RON_NEWS)?window.RON_NEWS:[];
+const grid=document.getElementById("newsgrid"),archive=document.getElementById("archive"),catSel=document.getElementById("category");
+const marketAssets=["EMERALD","DIAMANT","EISEN","GOLD","REDSTONE","KUPFER","KOHLE","QUARZ","LAPIS","NETHERIT"];
+const categories=[...new Set(pool.map(n=>n.category))].sort();categories.forEach(c=>{const o=document.createElement("option");o.value=c;o.textContent=c;catSel.appendChild(o)});
+document.getElementById("poolcount").textContent=pool.length+" MELDUNGEN IM ARCHIV";
+function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b}
+function age(){const n=Math.floor(Math.random()*58)+1;return "VOR "+String(n).padStart(2,"0")+" MIN"}
+function setLead(n){const box=document.getElementById("lead");box.className="card breaking "+(n.level||"");const c=document.getElementById("leadcat");c.className="news-cat "+(n.level||"");c.textContent=n.category;document.getElementById("leadtitle").textContent=n.headline;document.getElementById("leadtext").textContent=n.text;document.getElementById("leadregion").textContent="REGION // "+n.region;document.getElementById("leadsource").textContent="QUELLE // "+n.source;document.getElementById("leadtime").textContent="ZEIT // "+age()}
+function card(n){const a=document.createElement("article");a.className="card news-card";const tag=document.createElement("span");tag.className="news-cat "+(n.level||"");tag.textContent=n.category;const h=document.createElement("h3");h.textContent=n.headline;const p=document.createElement("p");p.textContent=n.text;const m=document.createElement("div");m.className="meta";m.innerHTML="<span></span><span></span>";m.children[0].textContent=n.region;m.children[1].textContent=age();a.append(tag,h,p,m);return a}
+function render(){let source=catSel.value==="ALLE"?pool:pool.filter(n=>n.category===catSel.value);source=shuffle(source);if(!source.length)return;setLead(source[0]);grid.innerHTML="";source.slice(1,10).forEach(n=>grid.appendChild(card(n)));archive.innerHTML="";shuffle(source).slice(10,24).forEach(n=>{const r=document.createElement("div");r.className="archive-row";r.innerHTML="<span class='archive-cat'></span><span class='archive-region'></span><span class='archive-title'></span><span class='archive-time'></span>";r.children[0].textContent=n.category;r.children[1].textContent=n.region;r.children[2].textContent=n.headline;r.children[3].textContent=age();archive.appendChild(r)})}
+function renderMarket(){const el=document.getElementById("market");el.innerHTML="";const vals=[];marketAssets.slice(0,7).forEach(a=>{const v=(Math.random()*150-45);vals.push([a,v]);const r=document.createElement("div");r.className="market-row";const x=document.createElement("span");x.textContent=a;const y=document.createElement("span");y.className=v>=0?"up":"down";y.textContent=(v>=0?"+":"")+v.toFixed(1).replace('.',',')+" %";r.append(x,y);el.appendChild(r)});const all=vals.concat(vals);document.getElementById("ticker").innerHTML=all.map(([a,v])=>"<span class='ticker-item'><strong>"+a+"</strong> <span class='"+(v>=0?"up":"down")+"'>"+(v>=0?"+":"")+v.toFixed(1).replace('.',',')+" %</span></span>").join("")}
+document.getElementById("refresh").addEventListener("click",()=>{render();renderMarket()});catSel.addEventListener("change",render);render();renderMarket();
+setInterval(()=>{if(document.visibilityState==="visible")render()},18000);setInterval(()=>{if(document.visibilityState==="visible")renderMarket()},30000);
+})();
+</script>
 </body>
 </html>

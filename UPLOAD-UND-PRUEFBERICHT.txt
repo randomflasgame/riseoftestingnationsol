@@ -1,0 +1,37 @@
+RISE OF NATIONS // GESAMTSTAND
+
+GitHub-Struktur:
+- README-WEBSITE.txt
+- config/site-config.js
+- data/mod-list.js
+- data/news.js
+- index.html
+- pages/changelog.html
+- pages/communications.html
+- pages/database.html
+- pages/download.html
+- pages/faq.html
+- pages/install.html
+- pages/intelligence.html
+- pages/server.html
+- pages/wiki-first-steps.html
+- pages/wiki-installation.html
+- pages/wiki-mods.html
+- pages/wiki-server.html
+- pages/wiki-troubleshooting.html
+- pages/wiki.html
+- style.css
+
+PRUEFUNG:
+- Alle lokalen HTML/CSS/JS-Verweise wurden auf vorhandene Dateien geprueft.
+- Keine Markdown-Codezaeune (``` oder ''') in HTML-Dateien gefunden.
+- Keine doppelten HTML-IDs gefunden.
+- Externe JavaScript-Dateien wurden syntaktisch geprueft.
+- Inline-JavaScript wurde syntaktisch geprueft.
+- data/news.js enthaelt 163 fiktive Minecraft-Lagemeldungen.
+- data/mod-list.js enthaelt die gelieferte Modliste.
+
+WICHTIG:
+Die aktuelle Wiki ist technisch funktionsfaehig und strukturiert, aber die von dir neu geforderte
+vollstaendige versionsgenaue Enzyklopaedie mit Detailwissen zu jedem einzelnen Mod ist noch nicht
+inhaltlich fuer alle Mods recherchiert. Diese Recherche muss separat erfolgen, damit nichts erfunden wird.
