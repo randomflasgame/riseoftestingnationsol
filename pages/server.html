@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SERVER // RISE OF NATIONS</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../config/site-config.js"></script>
+
+</head>
+<body>
+
+<header class="ron-header">
+  <a href="../index.html" class="ron-brand">RISE OF NATIONS<span>COMMAND NETWORK</span></a>
+  <nav class="ron-nav" aria-label="Hauptnavigation">
+    <a href="../index.html">HOME / BEFEHLSZENTRALE</a>
+    <a href="communications.html">KOMMUNIKATION</a>
+    <a href="intelligence.html">LAGEZENTRUM</a>
+    <a href="server.html">SERVER</a>
+    <a href="database.html">DATENBANK</a>
+    <a href="download.html">DOWNLOAD</a>
+    <a href="wiki.html">WIKI</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+</header>
+
+<main class="wrap">
+<section class="hero">
+  <div class="eyebrow">NETZBETRIEB // VERBINDUNG</div>
+  <h1>SERVER</h1>
+  <p>Dokumentierte Verbindungsdaten und technischer Stand des Rise-of-Nations-Servers.</p>
+</section>
+
+<section class="grid four">
+  <div class="card kpi"><div class="label">STATUS</div><div class="value online" id="srv-status">ONLINE</div></div>
+  <div class="card kpi"><div class="label">PRIMÄRE ADRESSE</div><div class="value" id="srv-primary">RISEOFNATIONS.factions.ws</div></div>
+  <div class="card kpi"><div class="label">NOTFALL-/DIREKT-IP</div><div class="value" id="srv-emergency">162.120.3.116:9175</div></div>
+  <div class="card kpi"><div class="label">MINECRAFT</div><div class="value">1.21.1</div></div>
+</section>
+<section class="grid two">
+  <div class="card"><h2>VERBINDUNG</h2><p>Nutze im Normalfall die primäre Serveradresse. Die Direkt-IP ist als alternative Verbindungsadresse dokumentiert.</p><div class="code">PRIMÄR // RISEOFNATIONS.factions.ws</div></div>
+  <div class="card"><h2>TECHNISCHER STAND</h2><p>Der dokumentierte Modpack-Stand ist Version 5.0.0 auf Minecraft 1.21.1 mit NeoForge 21.1.248.</p><div class="notice">Serverregeln, Whitelist-Status und weitere betriebliche Angaben wurden noch nicht als verifizierte Projektdaten hinterlegt.</div></div>
+</section>
+
+<div class="footer">RISE OF NATIONS // COMMAND NETWORK // MINECRAFT 1.21.1 // MODPACK 5.0.0</div>
+</main>
+<script>
+(function(){function c(p,f){try{let v=SITE_CONFIG;p.forEach(k=>v=v[k]);return v||f}catch(e){return f}}
+document.getElementById("srv-status").textContent=c(["server","status"],"ONLINE");
+document.getElementById("srv-primary").textContent=c(["server","primary"],"RISEOFNATIONS.factions.ws");
+document.getElementById("srv-emergency").textContent=c(["server","emergency"],"162.120.3.116:9175");})();
+</script>
+</body>
+</html>

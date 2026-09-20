@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DATENBANK // RISE OF NATIONS</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../config/site-config.js"></script>
+
+</head>
+<body>
+
+<header class="ron-header">
+  <a href="../index.html" class="ron-brand">RISE OF NATIONS<span>COMMAND NETWORK</span></a>
+  <nav class="ron-nav" aria-label="Hauptnavigation">
+    <a href="../index.html">HOME / BEFEHLSZENTRALE</a>
+    <a href="communications.html">KOMMUNIKATION</a>
+    <a href="intelligence.html">LAGEZENTRUM</a>
+    <a href="server.html">SERVER</a>
+    <a href="database.html">DATENBANK</a>
+    <a href="download.html">DOWNLOAD</a>
+    <a href="wiki.html">WIKI</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+</header>
+
+<main class="wrap">
+<section class="hero">
+  <div class="eyebrow">MODPACK // TECHNISCHER BESTAND</div>
+  <h1>DATENBANK</h1>
+  <p>Vollständige, vom Projektinhaber gelieferte Modliste inklusive Versionen und dokumentierter Auffälligkeiten.</p>
+</section>
+
+<section class="grid three">
+  <div class="card kpi"><div class="label">GELIEFERTE EINTRÄGE</div><div class="value" id="totalmods">-</div></div>
+  <div class="card kpi"><div class="label">DOKUMENTIERTE AUFFÄLLIGKEIT</div><div class="value warning">GOLEM DUNGEONS ×2</div></div>
+  <div class="card kpi"><div class="label">MEHRFACHVERSION</div><div class="value warning">MOONLIGHT 3.3.0 / 3.3.3</div></div>
+</section>
+<div class="searchbar"><input id="modsearch" placeholder="MOD ODER TECHNISCHE EINORDNUNG SUCHEN"><span class="tag" id="modcount">-</span></div>
+<div class="table-wrap"><table class="ron-table"><thead><tr><th>#</th><th>MODDATEI / VERSION</th><th>TECHNISCHE EINORDNUNG*</th><th>HINWEIS</th></tr></thead><tbody id="modbody"></tbody></table></div>
+<div class="notice">* Die technische Einordnung wird automatisch aus eindeutigen Begriffen im Modnamen abgeleitet und ist keine vollständige Aussage über den Funktionsumfang eines Mods.</div>
+
+<div class="footer">RISE OF NATIONS // COMMAND NETWORK // MINECRAFT 1.21.1 // MODPACK 5.0.0</div>
+</main>
+<script src="../data/mod-list.js"></script>
+<script>
+(function(){
+const list=window.RON_MODS||[], tbody=document.getElementById("modbody"), q=document.getElementById("modsearch"), count=document.getElementById("modcount");
+function category(n){const s=n.toLowerCase();
+ if(s.includes("create")||["electrodynamics","voltaic","nuclear science","assembly line","ballistix","blastcraft"].some(x=>s.includes(x)))return"INDUSTRIE / TECHNIK";
+ if(["tacz","superb warfare","musket","warfare","weaponry","archery","armor","drone warfare","ew addon","mavic","cannon","explosive"].some(x=>s.includes(x)))return"KAMPF / MILITÄR";
+ if(["yung","structure","dungeon","village","cave","stronghold","twilight","undergarden","nether","idas","formations"].some(x=>s.includes(x)))return"WELT / STRUKTUREN";
+ if(["farmer","aquaculture","brewery","vinery","cooking","butchery","cafe","ice cream","confectionery","cola","chocolate","crops","fishing"].some(x=>s.includes(x)))return"NAHRUNG / LANDWIRTSCHAFT";
+ if(["mobs","pet","critter","golem","monster","villager","cataclysm","ice and fire","naturalist"].some(x=>s.includes(x)))return"KREATUREN";
+ if(["lib","api","core","framework","architectury","cloth config","connector","kotlin"].some(x=>s.includes(x)))return"BIBLIOTHEK / API";
+ if(["fix","fast","fps","chunk","memory","leak","immediately","smooth","spark","neruina","ferrite","modernfix"].some(x=>s.includes(x)))return"PERFORMANCE / STABILITÄT";
+ return"SONSTIGES";
+}
+function render(){const term=q.value.trim().toLowerCase();tbody.innerHTML="";let shown=0;list.forEach((name,i)=>{if(term&&!name.toLowerCase().includes(term)&&!category(name).toLowerCase().includes(term))return;
+ const tr=document.createElement("tr");const duplicate=name==="Golem Dungeons 2.0.9";const note=duplicate?"DOPPELT IN GELIEFERTER LISTE":(name.startsWith("Moonlight ")?"MEHRERE VERSIONEN GELIEFERT":(name==="Ethereal Dreamscape"?"KEINE VERSION ANGEGEBEN":""));
+ tr.innerHTML="<td>"+(i+1)+"</td><td></td><td>"+category(name)+"</td><td>"+note+"</td>";tr.children[1].textContent=name;tbody.appendChild(tr);shown++});count.textContent=shown+" / "+list.length+" EINTRÄGE";}
+q.addEventListener("input",render);render();
+})();
+</script>
+<script>document.getElementById("totalmods").textContent=(window.RON_MODS||[]).length;</script>
+</body>
+</html>
