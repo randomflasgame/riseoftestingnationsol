@@ -1,0 +1,45 @@
+RISE OF NATIONS – WIKI RESEARCH BATCH 06
+Datum: 2026-09-23
+
+Schwerpunkt:
+- Serverstabilität / Netzwerk / Chunkloading
+- QoL und Utility
+- Protection / Death Recovery
+- Villager-/Worldgen-Systeme
+- weitere Storage-/Kitchen-Systeme
+- exakte 1.21.1/NeoForge-Versionen
+
+Neu vertieft:
+- Assembly Line
+- Better Chunk Loading
+- Carry On
+- Connectivity
+- Connector
+- Controlling
+- Cooking for Blockheads
+- Fast Async World Save
+- FastFurnace
+- Gravestone
+- Guard Villagers
+- IDAS
+- Iron Chests
+- Sound Physics Remastered
+- Comforts
+- Claim My Land
+- Chat Heads
+- Double Doors
+
+Besondere Befunde:
+- Better Chunk Loading 5.4 ist serverseitig, nutzt Bewegungsvorhersage und benötigt Cupboard.
+- Connectivity 7.6 behandelt u. a. Login-/Play-Timeouts, Packet-/Payload-Probleme und Netzwerkdiagnose.
+- Connector 2.0.0-beta.15 setzt Forgified Fabric API voraus und aktualisiert den Fabric Loader auf 0.19.x.
+- Cooking for Blockheads 21.1.24 ist exakt bestätigt und benötigt Balm.
+- Fast Async World Save 2.6 speichert World-/Player-/Dimensiondaten off-thread und benötigt Cupboard.
+- Guard Villagers 2.4.10 behebt einen seltenen Villager-Memory-Crash.
+- Claim My Land 2.9.1 ist als freies Parcel-System mit Nation/Zone/Citizen/Player-Hierarchie dokumentiert.
+- Chat Heads 0.15.3 ist client-only.
+- Double Doors 7.2 ist serverseitig.
+- Sound Physics Remastered 1.4.10 ist die bestätigte NeoForge-1.21.1-Version.
+
+Qualitätsregel:
+Nicht belegte Configdefaults, Slots, Range-Werte oder Commanddetails bleiben offen.

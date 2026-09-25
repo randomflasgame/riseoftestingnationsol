@@ -1,37 +1,98 @@
-RISE OF NATIONS // GESAMTSTAND
+RISE OF NATIONS – WIKI INTEGRATION / PRÜFBERICHT
 
-GitHub-Struktur:
-- README-WEBSITE.txt
-- config/site-config.js
-- data/mod-list.js
-- data/news.js
-- index.html
-- pages/changelog.html
-- pages/communications.html
-- pages/database.html
-- pages/download.html
-- pages/faq.html
-- pages/install.html
-- pages/intelligence.html
-- pages/server.html
-- pages/wiki-first-steps.html
-- pages/wiki-installation.html
-- pages/wiki-mods.html
-- pages/wiki-server.html
-- pages/wiki-troubleshooting.html
-- pages/wiki.html
-- style.css
+Webseitenbasis: Rise of Nations 5.0.0
+Minecraft: 1.21.1
+NeoForge: 21.1.248
 
-PRUEFUNG:
-- Alle lokalen HTML/CSS/JS-Verweise wurden auf vorhandene Dateien geprueft.
-- Keine Markdown-Codezaeune (``` oder ''') in HTML-Dateien gefunden.
-- Keine doppelten HTML-IDs gefunden.
-- Externe JavaScript-Dateien wurden syntaktisch geprueft.
-- Inline-JavaScript wurde syntaktisch geprueft.
-- data/news.js enthaelt 163 fiktive Minecraft-Lagemeldungen.
-- data/mod-list.js enthaelt die gelieferte Modliste.
+Aktive Inventarzeilen nach Nutzerfestlegung: 290
+Eindeutige Wiki-Dossiers: 289
+Teilweise verifizierte Dossiers: 20
+Offene/noch zu vertiefende Dossiers: 269
 
-WICHTIG:
-Die aktuelle Wiki ist technisch funktionsfaehig und strukturiert, aber die von dir neu geforderte
-vollstaendige versionsgenaue Enzyklopaedie mit Detailwissen zu jedem einzelnen Mod ist noch nicht
-inhaltlich fuer alle Mods recherchiert. Diese Recherche muss separat erfolgen, damit nichts erfunden wird.
+Korrekturen:
+- Moonlight: ausschließlich 3.3.3 aktiv
+- DragonLib 3.0.28 beta normalisiert
+- Create Railways Navigator 0.9.1 beta normalisiert
+- Golem Dungeons-Duplikat im Wiki zu einem Dossier zusammengefasst
+- DATENBANK von Modliste zu Build-/Systemregister umgebaut
+- Wiki-Suche, Kategorie- und Statusfilter eingebaut
+- Dynamische Mod-Dossier-Seite eingebaut
+- Quellen-/Verifikationsstatus sichtbar gemacht
+
+Statische Prüfungen:
+- HTML-Dateien: 16
+- Markdown-Fences: geprüft
+- Duplicate IDs: geprüft
+- Lokale href/src-Referenzen: geprüft
+- Datenregeln der Nutzerfestlegung: geprüft
+
+Offene technische Tiefe:
+Nicht alle 289 Dossiers besitzen bereits versionsgenaue Detailwerte. Offene Felder sind absichtlich gekennzeichnet statt erfunden.
+
+Python-Prüffehler: 0
+- keine
+
+
+RESEARCH BATCH 02:
+- 17 weitere Dossiers aus OFFEN -> TEILWEISE VERIFIZIERT überführt.
+
+
+RESEARCH BATCH 03:
+- 17 priorisierte Dossiers (P0/P1) vertieft; alle P0/P1 jetzt mindestens teilweise verifiziert.
+
+
+RESEARCH BATCH 04:
+- 19 weitere Create-Dossiers vertieft.
+- Automobility auf Nutzerwunsch von 0.5.0 auf 0.5.0.h aktualisiert.
+
+
+RESEARCH BATCH 05:
+- 18 weitere Dossiers aus Create/Aeronautics/CBC/Performance/Library vertieft.
+
+
+RESEARCH BATCH 06:
+- 18 weitere Server/QoL/Worldgen/Utility-Dossiers vertieft.
+
+
+RESEARCH BATCH 07:
+- 18 weitere Library/Performance/QoL-Dossiers vertieft.
+
+
+RESEARCH BATCH 08:
+- 18 weitere Adventure/Worldgen/Structure-Dossiers vertieft.
+
+
+RESEARCH BATCH 09:
+- 18 weitere Farming/Food/Pet/Utility-Dossiers vertieft.
+
+
+RESEARCH BATCH 10:
+- 18 weitere Warfare/Economy/Server/QoL/Library-Dossiers vertieft.
+
+
+RESEARCH BATCH 11:
+- 18 weitere Library/Config/Worldgen/Skill/QoL-Dossiers vertieft.
+
+
+RESEARCH BATCH 12:
+- 18 weitere Build/Rendering/Performance/Combat-Dossiers vertieft.
+
+
+RESEARCH BATCH 13:
+- 18 weitere Performance/Utility/Create/Library-Dossiers vertieft.
+
+
+RESEARCH BATCH 14:
+- 18 weitere Gameplay/Utility/L2/Worldgen-Dossiers vertieft.
+
+
+RESEARCH BATCH 15:
+- 18 weitere Dossiers vertieft.
+- User-facing Wiki/FAQ/Database/Troubleshooting auf freigegebenen Modbestand bereinigt.
+
+
+RESEARCH BATCH 16 / FINAL:
+- Letzte 18 Dossiers vertieft.
+- 289 / 289 Dossiers besitzen nun einen recherchierten Erstcheck.
+- 0 Dossiers verbleiben OFFEN.
+- Präzisions-Auditpunkte separat dokumentiert.

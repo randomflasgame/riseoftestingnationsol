@@ -1,0 +1,44 @@
+RISE OF NATIONS – WIKI RESEARCH BATCH 14
+Datum: 2026-09-24
+
+Schwerpunkt:
+- letzte größere Gameplay-/Utility-Gruppen
+- L2-Ökosystem
+- Worldgen / Events / QoL
+- kleine Food-/Cosmetic-Mods
+- Versions-/Port-Fallen sauber markieren
+
+Neu vertieft:
+- Asparagus Time
+- Bee in a Jar
+- Copper Golem Mod
+- Village Bounties
+- Undead Nights
+- Witchy Brewing Stand
+- XercaPaint
+- Explosive Enhancement
+- Ocean Floor
+- What Are They Up To
+- L2 Archery
+- L2 Backpack
+- L2 Complements
+- L2 Weaponry
+- Ultimate Pickaxes
+- Settlement Roads
+- Narcosis
+- Struts
+
+Besondere Befunde:
+- L2 Archery 3.0.4 benötigt L2 Library, L2 Backpack und L2 Complements.
+- L2 Weaponry 3.1.4 benötigt L2 Library + L2 Complements und behebt einen Lightning-Dragonsteel-Crash.
+- L2 Backpack 3.1.5 ist als 1.21.1-NeoForge-Version bestätigt; das aktuelle System umfasst Backpack, Ender Backpack, Dimensional Storage und spezialisierte Bags.
+- Settlement Roads 2.0.1 läuft auf NeoForge 1.21.1 über Sinytra Connector + Forgified Fabric API.
+- Witchy Brewing Stand 0.1.10 ändert ausschließlich Darstellung/Platzierung des Vanilla-Brewing-Stands, nicht die Brewing-Mechanik.
+- Ultimate Pickaxes 1.0.27 unterstützt laut Dateimetadaten explizit Minecraft 1.21.1, obwohl die Hauptdatei auch neuere 1.21.x-Versionen bedient.
+- XercaPaint 2.0.1 besitzt widersprüchliche historische CurseForge-Dateimetadaten; daher bewusst nur teilweise verifiziert.
+- Narcosis 1.4.1 wird ausschließlich als fiktives Ingame-Processing-/Economy-System dokumentiert; keine realweltlichen Herstellungsanleitungen.
+- Undead Nights 2.1.7 verschiebt den Horde-Spawner-Tick in ein eigenes Event.
+
+Qualitätsregel:
+Versionsunsicherheiten werden sichtbar markiert. Wenn Projektseiten aktuellere Builds zeigen, werden
+neuere Features nicht automatisch auf den Packstand zurückprojiziert.

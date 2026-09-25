@@ -1,0 +1,43 @@
+RISE OF NATIONS – WIKI RESEARCH BATCH 08
+Datum: 2026-09-23
+
+Schwerpunkt:
+- Adventure / Bosses / Dimensions
+- Worldgen- und Structure-Systeme
+- YUNG-Komplettpaket
+- Moog-Structure-Stack
+- exakte NeoForge-1.21.1-Packversionen
+
+Neu vertieft:
+- Ice and Fire
+- Eternal Starlight
+- Illager Invasion
+- Legendary Monsters
+- Golem Dungeons
+- Formations
+- Formations Nether
+- Moog’s End Structures
+- Moog’s Structures
+- Moog’s Voyager Structures
+- T and T
+- Underground Village
+- YUNG’s Better Caves
+- YUNG’s Better Mineshafts
+- YUNG’s Better Strongholds
+- YUNG’s Bridges
+- YUNG’s Cave Biomes
+- YUNG’s Extras
+
+Besondere Befunde:
+- Ice and Fire 2.1 beta 3 ist die Community Edition für 1.21.1 / NeoForge; neuere Releases werden NICHT auf den Packstand übertragen.
+- Eternal Starlight 0.8.1 erweitert Bossstruktur-Generation und schwächt Oblivion gezielt ab.
+- Illager Invasion 21.1.6 fügt die neuen Illager korrekt dem vanilla minecraft:illagers-Tag hinzu.
+- Golem Dungeons 2.0.9 besitzt dokumentierte Integrationen zu Cataclysm und Twilight Forest.
+- Moog's Structures 3.0.3 wurde als Moog's Structure Lib identifiziert.
+- Towns and Towers 1.13.9 entspricht dem Packeintrag T and T und unterstützt Cristel Lib 3.1.x.
+- YUNG's Better Mineshafts besitzt 13 Biomevarianten; Better Strongholds hat 15+ Raumtypen; Bridges 15+ Brückentypen.
+- YUNG's Cave Biomes 3.1.1 bringt Frosted Caves und Lost Caves inklusive eigener Mobs/Items/Musik.
+
+Qualitätsregel:
+Worldgen-Spacing, Spawnchancen, Mobwerte, Lootgewichte und Configdefaults werden erst aus
+den tatsächlichen JAR-/Datapack-/Packconfig-Daten als verbindliche Zahlen übernommen.

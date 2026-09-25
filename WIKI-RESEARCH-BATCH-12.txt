@@ -1,0 +1,43 @@
+RISE OF NATIONS – WIKI RESEARCH BATCH 12
+Datum: 2026-09-23
+
+Schwerpunkt:
+- komplette noch offene Macaw-Baugruppe
+- Rendering / Dynamic Lighting / Connected Textures
+- Server-Distance-Performance
+- Combat-QoL und Mutant-Mobs
+- Config-Infrastruktur
+
+Neu vertieft:
+- Macaw’s Bridges
+- Macaw’s Doors
+- Macaw’s Fences
+- Macaw’s Holidays
+- Macaw’s Paths
+- Macaw’s Paintings
+- Macaw’s Roofs
+- Macaw’s Stairs
+- Macaw’s Trapdoors
+- Macaw’s Windows
+- Macaw’s Quark
+- Continuity
+- Configurable
+- Cut Through
+- DynView
+- Immersive Paintings
+- LambDynamicLights
+- Mutant Monsters
+
+Besondere Befunde:
+- Macaw's Roofs 2.3.2, Windows 2.4.2, Trapdoors 1.1.5, Paths 1.1.1, Paintings 1.1.0,
+  Doors 1.1.5, Bridges 3.1.2, Fences 1.2.1 und Stairs 1.0.2 sind als 1.21.1-NeoForge-Versionen belegt.
+- Macaw's Quark 1.6.1 ist der 1.21.1-NeoForge-Kompatibilitätslayer für Quark + Macaw-Baureihen.
+- Continuity 3.0.0 läuft im Pack über NeoContinuity mit Portstand 0.0.1 und nativem NeoForge-Artefakt.
+- DynView 4.0 passt View-/Simulation-Distance dynamisch an Serverlast an.
+- Cut Through 21.1.0 ist clientseitig und benötigt auf NeoForge Puzzles Lib.
+- LambDynamicLights 4.8.10 ist clientseitig und der offizielle EOL-Stand für Minecraft 1.21.
+- Mutant Monsters 21.1.1 behebt mehrere konkrete Mutant-Zombie-/Creeper-Sync-/Movement-Probleme.
+- Immersive Paintings 0.7.8 nutzt Custom Images, Multiplayer-Sync, LOD, Caching und Lazy Streaming.
+
+Qualitätsregel:
+Keine Blockzahlen, Schadenswerte, Configdefaults oder Rezeptdetails werden aus älteren Versionen geraten.

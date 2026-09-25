@@ -1,0 +1,44 @@
+RISE OF NATIONS – WIKI RESEARCH BATCH 15
+Datum: 2026-09-24
+
+Schwerpunkt:
+- Bau/Deko und saisonale Inhalte
+- Mob-/Pet-Erweiterungen
+- Create-Train-/Factory-Addons
+- Nether-Progression und Nether-Raids
+- Worldgen-/Structure-Kompatibilität
+- User-facing Scope-Cleanup
+
+Neu vertieft:
+- Builders Bounty
+- CNB
+- Cosy Critters
+- DecoCraft Nature
+- Escalated
+- Floralis
+- Furniture Mod Tools Refurbished
+- Happy Hallows
+- I Love Gambling
+- Interiors
+- Meat Blocks
+- Merry Making
+- Nether Invader
+- Nether Remastered
+- Nirvana
+- Polly’s Pets
+- Realism
+- Villages and Pillages
+
+Besondere Befunde:
+- CNB 1.7.17 ist Creatures and Beasts: Continued und benötigt GeckoLib.
+- Cosy Critters 0.3.3 ist client-only und bietet einzeln konfigurierbare Birds/Moths/Tiny Spiders/Hat-Man-Effekte.
+- Create: Escalated 1.3.1 behebt u. a. Movement Jitter und einen Crash mit Petrolpark's Library.
+- Floralis 17.0.0 ist der 1.21.1-NeoForge-Port und nutzt für Plant Fibers den c:fertilizers-Tag.
+- Create: Interiors 0.6.1 ist bestätigt; inzwischen existiert ein zweites 0.6.1-Bugfix-Artefakt, daher bleibt der konkrete Pack-Subbuild bis zur JAR-Prüfung offen.
+- Nether Invader 3.6.0 nutzt Horde Omen -> Village -> Piglin Raid als zentrale Progression.
+- Nether Remastered 2.6 ersetzt den direkten Netherzugang durch Essence-/Shard-/Crystal-/Seal-Progression.
+- Villages & Pillages 1.0.3 enthält einen Compatibility-Fix für YUNG's API 5.1.4+; das Pack nutzt 5.1.6.
+- User-facing Seiten wurden bereinigt, damit ausgeschlossene/ignorierte Alt-Einträge nicht mehr namentlich angezeigt werden.
+
+Qualitätsregel:
+Unsichere Subbuilds, Statistiken, Spawnraten und komplette Registries bleiben offen, bis die tatsächlichen JARs/Configs geprüft sind.

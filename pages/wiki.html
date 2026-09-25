@@ -6,10 +6,8 @@
 <title>WIKI // RISE OF NATIONS</title>
 <link rel="stylesheet" href="../style.css">
 <script src="../config/site-config.js"></script>
-
 </head>
 <body>
-
 <header class="ron-header">
   <a href="../index.html" class="ron-brand">RISE OF NATIONS<span>COMMAND NETWORK</span></a>
   <nav class="ron-nav" aria-label="Hauptnavigation">
@@ -19,30 +17,99 @@
     <a href="server.html">SERVER</a>
     <a href="database.html">DATENBANK</a>
     <a href="download.html">DOWNLOAD</a>
-    <a href="wiki.html">WIKI</a>
+    <a class="active" href="wiki.html">WIKI</a>
     <a href="faq.html">FAQ</a>
   </nav>
 </header>
 
 <main class="wrap">
 <section class="hero">
-  <div class="eyebrow">WISSENSDATENBANK // HAUPTVERZEICHNIS</div>
+  <div class="eyebrow">WISSENSNETZ // VERSIONIERTE MOD-ENZYKLOPÄDIE</div>
   <h1>WIKI</h1>
-  <p>Technische Wissensdatenbank für Installation, Serverzugang und den gelieferten Modbestand.</p>
+  <p>Durchsuchbare Einsatzbibliothek für Rise of Nations 5.0.0. Anfänger bekommen klare Einstiege, technische Nutzer erhalten Diagnose-, Integrations- und Rechenebenen – aber nur dort, wo die Daten belastbar sind.</p>
 </section>
+
+<section class="grid four wiki-kpis">
+  <div class="card kpi"><div class="label">WIKI-DOSSIERS</div><div class="value" id="wikiTotal">-</div></div>
+  <div class="card kpi"><div class="label">AKTIVE INVENTARZEILEN</div><div class="value">290</div></div>
+  <div class="card kpi"><div class="label">PACK-BASIS</div><div class="value">1.21.1</div><div class="label">NEOFORGE 21.1.248</div></div>
+  <div class="card kpi"><div class="label">DATENPOLITIK</div><div class="value online">NO GUESSING</div></div>
+</section>
+
+<div class="notice"><strong>Forschungsregel:</strong> Eine bestätigte Mod-Version bedeutet nicht automatisch, dass jeder technische Wert bestätigt ist. Ungeprüfte Rezepte, Schadenswerte, Energiezahlen, Formeln oder Commands werden ausdrücklich als offen markiert.</div>
 
 <section class="wiki-nav">
-  <a class="card wiki-link" href="wiki-installation.html"><div class="label">WIKI 01</div><h3>INSTALLATION</h3><p>Versionen, Download und saubere Grundinstallation.</p></a>
-  <a class="card wiki-link" href="wiki-first-steps.html"><div class="label">WIKI 02</div><h3>ERSTE SCHRITTE</h3><p>Vor dem Serverbeitritt: Versionen, Adresse und grundlegende Checks.</p></a>
-  <a class="card wiki-link" href="wiki-mods.html"><div class="label">WIKI 03</div><h3>MOD-DATENBANK</h3><p>Vollständige gelieferte Modliste mit Suche und technischen Hinweisen.</p></a>
-  <a class="card wiki-link" href="wiki-server.html"><div class="label">WIKI 04</div><h3>SERVERDATEN</h3><p>Serveradresse, Direkt-IP und dokumentierter Versionsstand.</p></a>
-  <a class="card wiki-link" href="wiki-troubleshooting.html"><div class="label">WIKI 05</div><h3>FEHLERSUCHE</h3><p>Prüfschritte auf Basis der bekannten Projektinformationen.</p></a>
-  <a class="card wiki-link" href="changelog.html"><div class="label">WIKI 06</div><h3>ÄNDERUNGSSTAND</h3><p>Aktueller dokumentierter Versionsstand und offene Historie.</p></a>
+  <a class="card wiki-link" href="wiki-installation.html"><div class="label">GRUNDLAGE 01</div><h3>INSTALLATION</h3><p>Sauberer Client-/Pack-Start.</p></a>
+  <a class="card wiki-link" href="wiki-first-steps.html"><div class="label">GRUNDLAGE 02</div><h3>ERSTE SCHRITTE</h3><p>Vom ersten Start bis zum Serverbeitritt.</p></a>
+  <a class="card wiki-link" href="wiki-troubleshooting.html"><div class="label">GRUNDLAGE 03</div><h3>FEHLERSUCHE</h3><p>Versions-, Netzwerk- und Packdiagnose.</p></a>
 </section>
-<div class="notice">Wiki-Grundsatz: Es werden keine Mod-Funktionen, Rezepte, Serverregeln oder Spielmechaniken erfunden. Nicht belegte Bereiche bleiben ausdrücklich als noch nicht dokumentiert gekennzeichnet.</div>
 
-<div class="footer">RISE OF NATIONS // COMMAND NETWORK // MINECRAFT 1.21.1 // MODPACK 5.0.0</div>
+<section class="wiki-command-panel">
+  <div class="wiki-panel-head">
+    <div>
+      <div class="eyebrow">MOD-DOSSIERS // LIVE-FILTER</div>
+      <h2>TECHNISCHES HAUPTREGISTER</h2>
+    </div>
+    <span class="tag" id="wikiCount">-</span>
+  </div>
+
+  <div class="searchbar wiki-searchbar">
+    <input id="wikiSearch" type="search" placeholder="MOD, VERSION, KATEGORIE ODER STICHWORT SUCHEN">
+    <select id="wikiCategory" aria-label="Kategorie"><option value="">ALLE KATEGORIEN</option></select>
+    <select id="wikiStatus" aria-label="Forschungsstatus">
+      <option value="">ALLE STATUS</option>
+      <option value="TEILWEISE">TEILWEISE VERIFIZIERT</option>
+      <option value="OFFEN">OFFEN</option>
+    </select>
+  </div>
+
+  <div id="wikiResults" class="wiki-results"></div>
+</section>
+
+<div class="notice">Die Wiki folgt dem aktuell freigegebenen Modbestand. Moonlight wird ausschließlich als <strong>3.3.3</strong> geführt; identische Doppelzeilen werden zu einem Dossier zusammengeführt.</div>
+<div class="footer">RISE OF NATIONS // COMMAND NETWORK // WIKI DOSSIER SYSTEM // MODPACK 5.0.0</div>
 </main>
 
+<script src="../data/wiki-data.js"></script>
+<script>
+(function(){
+  const data = window.RON_WIKI || [];
+  const search = document.getElementById("wikiSearch");
+  const category = document.getElementById("wikiCategory");
+  const status = document.getElementById("wikiStatus");
+  const results = document.getElementById("wikiResults");
+  const count = document.getElementById("wikiCount");
+  document.getElementById("wikiTotal").textContent = data.length;
+
+  [...new Set(data.map(x=>x.category))].sort().forEach(c=>{
+    const o=document.createElement("option");o.value=c;o.textContent=c;category.appendChild(o);
+  });
+
+  function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));}
+  function searchable(x){
+    return [x.name,x.version,x.category,x.researchStatus,x.summary,
+      ...(x.coreMechanics||[]),...(x.packIntegrations||[])].join(" ").toLowerCase();
+  }
+  function render(){
+    const q=search.value.trim().toLowerCase(), c=category.value, st=status.value;
+    const filtered=data.filter(x=>(!q||searchable(x).includes(q))&&(!c||x.category===c)&&(!st||x.researchStatus.includes(st)));
+    count.textContent=filtered.length+" / "+data.length+" DOSSIERS";
+    results.innerHTML=filtered.map(x=>{
+      const state=x.researchStatus.startsWith("TEIL")?"partial":"open";
+      return `<a class="wiki-result" href="wiki-mod.html?mod=${encodeURIComponent(x.slug)}">
+        <div class="wiki-result-top"><span class="wiki-status ${state}">${esc(x.researchStatus)}</span><span class="tag">${esc(x.category)}</span></div>
+        <h3>${esc(x.name)}</h3>
+        <div class="wiki-version">${esc(x.version)} // MC ${esc(x.minecraftVersion)}</div>
+        <p>${esc(x.summary)}</p>
+        <div class="wiki-result-foot"><span>PRIORITÄT ${esc(x.priority)}</span><span>DOSSIER ÖFFNEN →</span></div>
+      </a>`;
+    }).join("") || `<div class="notice">Keine Dossiers für diesen Filter gefunden.</div>`;
+  }
+  search.addEventListener("input",render);
+  category.addEventListener("change",render);
+  status.addEventListener("change",render);
+  render();
+})();
+</script>
 </body>
 </html>

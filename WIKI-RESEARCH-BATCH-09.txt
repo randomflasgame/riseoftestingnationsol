@@ -1,0 +1,42 @@
+RISE OF NATIONS – WIKI RESEARCH BATCH 09
+Datum: 2026-09-23
+
+Schwerpunkt:
+- Farming / Food / Pets
+- Farmer's Delight / Let's Do Integrationen
+- Aquaculture-Kompatibilität
+- Survival-Hydration
+- Recipe-Conflict-Utility
+
+Neu vertieft:
+- Accelerated Decay
+- Adorable Hamster Pets
+- Aquaculture 2 Lava Fishing Addon
+- Aquaculture Delight
+- Butchery
+- Crops Love Rain
+- Farmer’s Contracts
+- Fishing Nets
+- Let’s Do Brewery
+- Let’s Do Farm & Charm
+- Let’s Do Vinery
+- My Nether’s Delight
+- Thirst Was Taken
+- Straw Golem
+- Pet Cemetery
+- Shared Pets
+- Weeder
+- Polymorph
+
+Besondere Befunde:
+- Farmer's Contracts 1.0.4 besitzt recipe-aware Rewards, Reputation, sechs Kundentypen und vier Rarity-Stufen.
+- Shared Pets 1.0.0 erlaubt bis zu fünf Co-Owner und speichert Daten direkt auf den Pet-Entities.
+- Thirst Was Taken 2.1.5 integriert Create, Farmer's Delight und AppleSkin.
+- Straw Golem 2.2.2 besitzt Harvest/Replant/Delivery sowie konfigurierbare Hunger-/Lifespan-Systeme.
+- Brewery 2.1.9 ist explizit auf Farm & Charm ausgelegt und behebt einen NeoForge-Breathalyzer-Crash.
+- Aquaculture Delight 1.2.0 verbindet Aquaculture 2 und Farmer's Delight über Gerichte, Knives und Cooking/Cutting Recipes.
+- Polymorph 1.1.0 löst Crafting/Smelting/Smithing-Konflikte, ohne Rezepte entfernen zu müssen.
+
+Qualitätsregel:
+Technische Werte, Lootchancen, Growth-Rates, Effektstärken und Packconfig-Defaults bleiben offen,
+wenn sie nicht exakt für die verwendete Version belegt sind.

@@ -1,0 +1,43 @@
+RISE OF NATIONS – WIKI RESEARCH BATCH 04
+Datum: 2026-09-22
+
+Nutzerfestlegung:
+- Automobility wird ab jetzt mit der neuesten 1.21.1-NeoForge-Version geführt: 0.5.0.h.
+
+Schwerpunkt:
+- restliches verifizierbares Create-Addon-Ökosystem
+- exakte Minecraft-1.21.1/NeoForge-Packversionen
+- Cross-Mod-Integrationen
+- bekannte versionsbezogene Fixes/Probleme
+
+Neu vertieft:
+- Create Aeronautics Lift Patch
+- Create Aeronautics Roller Fix
+- Create Better FPS
+- Create Better Villagers
+- Create Cafe
+- Create Chocolate Fountain
+- Create Cola Factory
+- Create Confectionery
+- Create Deco
+- Create Encased
+- Create Ender Gateway
+- Create Liquid Fuel
+- Create Optical
+- Create Rustic Structures
+- Create Sophisticated Backpacks Compat
+- Create Treadmill
+- Create Train Parts
+- Create Ultimate Factory
+- Create Vibrant Vaults
+
+Besondere Befunde:
+- Create Aeronautics Roller Fix ist inzwischen deprecated, aber der Upstream-Fix liegt laut Autor erst in Aeronautics 1.3.1 / Sable 2.0.5. Rise of Nations nutzt 1.3.0 / 2.0.3, daher bleibt der Patch im aktuellen Packstand relevant.
+- Create Better FPS 1.1.4 nennt für Minecraft 1.21.1 Sodium + Iris. Diese Namen fehlen in der gelieferten Modliste und sollten später gegen den echten mods-Ordner geprüft werden.
+- Create Train Parts 0.5.2 ist explizit für Create 6.0.10 gebaut.
+- Create Ultimate Factory 2.2.4 besitzt eine dokumentierte Create-Aeronautics-Sonderintegration für renewable End Stone.
+- Create Chocolate Fountain 1.1.0 integriert sich offiziell mit Thirst Was Taken und Create Confectionery.
+- Create Vibrant Vaults 0.3.2 dokumentiert konkrete Create-Rezepte für Rotation, Färben, Stonecutting/Block Cutting und Bulk Washing.
+
+Qualitätsregel:
+Nicht belegte technische Zahlen, Recipe-Mengen, Config-Defaults oder internen Formeln bleiben offen.

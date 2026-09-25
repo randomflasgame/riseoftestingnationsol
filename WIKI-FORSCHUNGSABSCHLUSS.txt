@@ -1,0 +1,21 @@
+RISE OF NATIONS – WIKI FORSCHUNGSABSCHLUSS / ERSTER VOLLDURCHLAUF
+
+Stand: 2026-09-24
+Minecraft: 1.21.1
+NeoForge: 21.1.248
+Modpack: 5.0.0
+
+STATUS
+- 289 eindeutige Wiki-Dossiers
+- 289 Dossiers mindestens teilweise verifiziert
+- 0 Dossiers im Status OFFEN
+- 290 aktive Inventarzeilen nach Freigabefilter
+
+BEDEUTUNG
+Der quellenbasierte Erstforschungsdurchlauf über den kompletten freigegebenen Modbestand ist abgeschlossen.
+Die Wiki trennt bewusst zwischen bestätigten Packfakten und noch nicht versionsgenau belegten technischen Details.
+
+NOCH NICHT AUTOMATISCH 'VOLLSTÄNDIG VERIFIZIERT'
+Für vollständige JAR-/Config-Präzision werden weiterhin die realen mods-, config- und datapack-Dateien benötigt.
+Damit lassen sich anschließend exakte Mod-IDs, Dependency-Ranges, Rezepte, Tags, Registrylisten, Configdefaults,
+Ponder-Daten, Loot Tables, Commands und technische Werte gegen den tatsächlich laufenden Packstand prüfen.

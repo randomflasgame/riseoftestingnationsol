@@ -6,10 +6,8 @@
 <title>DATENBANK // RISE OF NATIONS</title>
 <link rel="stylesheet" href="../style.css">
 <script src="../config/site-config.js"></script>
-
 </head>
 <body>
-
 <header class="ron-header">
   <a href="../index.html" class="ron-brand">RISE OF NATIONS<span>COMMAND NETWORK</span></a>
   <nav class="ron-nav" aria-label="Hauptnavigation">
@@ -17,7 +15,7 @@
     <a href="communications.html">KOMMUNIKATION</a>
     <a href="intelligence.html">LAGEZENTRUM</a>
     <a href="server.html">SERVER</a>
-    <a href="database.html">DATENBANK</a>
+    <a class="active" href="database.html">DATENBANK</a>
     <a href="download.html">DOWNLOAD</a>
     <a href="wiki.html">WIKI</a>
     <a href="faq.html">FAQ</a>
@@ -26,42 +24,46 @@
 
 <main class="wrap">
 <section class="hero">
-  <div class="eyebrow">MODPACK // TECHNISCHER BESTAND</div>
+  <div class="eyebrow">SYSTEMREGISTER // BUILD- UND INFRASTRUKTURDATEN</div>
   <h1>DATENBANK</h1>
-  <p>Vollständige, vom Projektinhaber gelieferte Modliste inklusive Versionen und dokumentierter Auffälligkeiten.</p>
+  <p>Technischer Zustand des Rise-of-Nations-Pakets. Mod-Erklärungen gehören bewusst in die Wiki; hier liegen Build-, Netzwerk-, Release- und Datenqualitätsinformationen.</p>
+</section>
+
+<section class="grid four">
+  <div class="card kpi"><div class="label">MODPACK</div><div class="value">5.0.0</div></div>
+  <div class="card kpi"><div class="label">MINECRAFT</div><div class="value">1.21.1</div></div>
+  <div class="card kpi"><div class="label">NEOFORGE</div><div class="value">21.1.248</div></div>
+  <div class="card kpi"><div class="label">SYSTEM</div><div class="value online">OPERATIONAL</div></div>
+</section>
+
+<section class="grid two">
+  <div class="card">
+    <div class="label">NETZWERK-ENDPUNKTE</div><h2>SERVER</h2>
+    <table class="ron-table compact"><tbody>
+      <tr><th>Primäradresse</th><td>RISEOFNATIONS.factions.ws</td></tr>
+      <tr><th>Direkt / Notfall</th><td>162.120.3.116:9175</td></tr>
+      <tr><th>Status</th><td class="online">ONLINE</td></tr>
+    </tbody></table>
+  </div>
+  <div class="card">
+    <div class="label">WIKI-DATENMODELL</div><h2>FORSCHUNGSREGISTER</h2>
+    <table class="ron-table compact"><tbody>
+      <tr><th>Aktive Inventarzeilen</th><td>290</td></tr>
+      <tr><th>Eindeutige Wiki-Dossiers</th><td>289</td></tr>
+      <tr><th>Ausgeschlossen</th><td>2</td></tr>
+      <tr><th>Moonlight aktiv</th><td>3.3.3</td></tr>
+    </tbody></table>
+  </div>
 </section>
 
 <section class="grid three">
-  <div class="card kpi"><div class="label">GELIEFERTE EINTRÄGE</div><div class="value" id="totalmods">-</div></div>
-  <div class="card kpi"><div class="label">DOKUMENTIERTE AUFFÄLLIGKEIT</div><div class="value warning">GOLEM DUNGEONS ×2</div></div>
-  <div class="card kpi"><div class="label">MEHRFACHVERSION</div><div class="value warning">MOONLIGHT 3.3.0 / 3.3.3</div></div>
+  <div class="card"><div class="label">DATENQUALITÄT</div><h3>GOLEM DUNGEONS</h3><p>2.0.9 steht doppelt im gelieferten Inventar. Die Wiki führt ein gemeinsames Dossier; der Inventarhinweis bleibt erhalten.</p></div>
+  <div class="card"><div class="label">NUTZERFESTLEGUNG</div><h3>MOONLIGHT</h3><p>Für die Website gilt ausschließlich Version 3.3.3.</p></div>
+  <div class="card"><div class="label">WIKI-SCOPE</div><h3>FREIGEGEBENER BESTAND</h3><p>Die Enzyklopädie führt ausschließlich den aktuell freigegebenen Modbestand.</p></div>
 </section>
-<div class="searchbar"><input id="modsearch" placeholder="MOD ODER TECHNISCHE EINORDNUNG SUCHEN"><span class="tag" id="modcount">-</span></div>
-<div class="table-wrap"><table class="ron-table"><thead><tr><th>#</th><th>MODDATEI / VERSION</th><th>TECHNISCHE EINORDNUNG*</th><th>HINWEIS</th></tr></thead><tbody id="modbody"></tbody></table></div>
-<div class="notice">* Die technische Einordnung wird automatisch aus eindeutigen Begriffen im Modnamen abgeleitet und ist keine vollständige Aussage über den Funktionsumfang eines Mods.</div>
 
-<div class="footer">RISE OF NATIONS // COMMAND NETWORK // MINECRAFT 1.21.1 // MODPACK 5.0.0</div>
+<div class="notice">Datenbank ≠ Modliste. Für Mod-Funktionen, Abhängigkeiten, technische Werte, Formeln und Quellen das <a href="wiki.html"><strong>WIKI-REGISTER</strong></a> verwenden.</div>
+<div class="footer">RISE OF NATIONS // COMMAND NETWORK // SYSTEM DATABASE // BUILD 5.0.0</div>
 </main>
-<script src="../data/mod-list.js"></script>
-<script>
-(function(){
-const list=window.RON_MODS||[], tbody=document.getElementById("modbody"), q=document.getElementById("modsearch"), count=document.getElementById("modcount");
-function category(n){const s=n.toLowerCase();
- if(s.includes("create")||["electrodynamics","voltaic","nuclear science","assembly line","ballistix","blastcraft"].some(x=>s.includes(x)))return"INDUSTRIE / TECHNIK";
- if(["tacz","superb warfare","musket","warfare","weaponry","archery","armor","drone warfare","ew addon","mavic","cannon","explosive"].some(x=>s.includes(x)))return"KAMPF / MILITÄR";
- if(["yung","structure","dungeon","village","cave","stronghold","twilight","undergarden","nether","idas","formations"].some(x=>s.includes(x)))return"WELT / STRUKTUREN";
- if(["farmer","aquaculture","brewery","vinery","cooking","butchery","cafe","ice cream","confectionery","cola","chocolate","crops","fishing"].some(x=>s.includes(x)))return"NAHRUNG / LANDWIRTSCHAFT";
- if(["mobs","pet","critter","golem","monster","villager","cataclysm","ice and fire","naturalist"].some(x=>s.includes(x)))return"KREATUREN";
- if(["lib","api","core","framework","architectury","cloth config","connector","kotlin"].some(x=>s.includes(x)))return"BIBLIOTHEK / API";
- if(["fix","fast","fps","chunk","memory","leak","immediately","smooth","spark","neruina","ferrite","modernfix"].some(x=>s.includes(x)))return"PERFORMANCE / STABILITÄT";
- return"SONSTIGES";
-}
-function render(){const term=q.value.trim().toLowerCase();tbody.innerHTML="";let shown=0;list.forEach((name,i)=>{if(term&&!name.toLowerCase().includes(term)&&!category(name).toLowerCase().includes(term))return;
- const tr=document.createElement("tr");const duplicate=name==="Golem Dungeons 2.0.9";const note=duplicate?"DOPPELT IN GELIEFERTER LISTE":(name.startsWith("Moonlight ")?"MEHRERE VERSIONEN GELIEFERT":(name==="Ethereal Dreamscape"?"KEINE VERSION ANGEGEBEN":""));
- tr.innerHTML="<td>"+(i+1)+"</td><td></td><td>"+category(name)+"</td><td>"+note+"</td>";tr.children[1].textContent=name;tbody.appendChild(tr);shown++});count.textContent=shown+" / "+list.length+" EINTRÄGE";}
-q.addEventListener("input",render);render();
-})();
-</script>
-<script>document.getElementById("totalmods").textContent=(window.RON_MODS||[]).length;</script>
 </body>
 </html>

@@ -1,0 +1,43 @@
+RISE OF NATIONS – WIKI RESEARCH BATCH 16 / FINALER ERSTCHECK
+Datum: 2026-09-24
+
+Schwerpunkt:
+- letzte 18 offenen Dossiers
+- Create-/CBC-/SBW-Integrationen
+- Server-Administration und Utility
+- exakte 1.21.1-NeoForge-Versionen
+- Abhängigkeitsanomalien sichtbar machen
+
+Neu vertieft:
+- BF Blockpack
+- CBCAT Fix
+- CCMCP
+- CMS
+- CoreProtect Neo
+- Cosmetic Corpse Compat
+- Create DnD Bore Block Fix
+- Create MF
+- Create Space
+- DTRCHNeo
+- FWA
+- I Architecture
+- Inventory View
+- LMFT
+- MCSP
+- Psycho Villagers
+- Suppression Mod
+- TF DNV
+
+ERGEBNIS:
+- 289 / 289 Wiki-Dossiers besitzen nun mindestens einen recherchierten, quellenbasierten Erstcheck.
+- 0 Dossiers verbleiben im Status OFFEN.
+- Das bedeutet NICHT, dass jeder einzelne technische Zahlenwert schon JAR-/Config-genau verifiziert ist.
+
+Wichtige Auditpunkte:
+- Cosmetic Corpse Compat 1.0.0 verlangt Corpse, aber Corpse ist in der gelieferten Inventarliste nicht als eigenes Dossier vorhanden.
+- Create DnD Bore Block Fix 1.0.0 verlangt Create: Dreams & Desires; dieser Basismod ist in der gelieferten Inventarliste nicht als eigenes Dossier vorhanden.
+- I Architecture 0.1.1b wurde explizit auf Create 6.0.8 portiert; Rise of Nations nutzt 6.0.10, daher Packtest sinnvoll.
+- LMFT 1.1.1 ist als Multi-Version-NeoForge-Build mit 1.21.1-Kompatibilität verifiziert; exakter JAR-Dateiname im Pack bleibt ohne mods-Ordner offen.
+
+Qualitätsregel:
+Wo Recipes, Configdefaults, Damage, Speeds, Ranges, Spawnchancen oder API-Methoden nicht exakt für die Packdatei belegt sind, bleiben sie als nicht verifiziert markiert.

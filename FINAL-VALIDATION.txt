@@ -1,0 +1,11 @@
+RISE OF NATIONS – FINAL VALIDATION
+
+Wiki-Dossiers: 289
+Teilweise verifiziert: 289
+Offen: 0
+Aktive Inventarzeilen: 290
+HTML-Dateien: 16
+JS-Dateien node --check: 4
+Inline-Skripte node --check: 7
+Prüffehler: 0
+STATUS: BESTANDEN

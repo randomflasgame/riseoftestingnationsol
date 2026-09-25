@@ -1,0 +1,9 @@
+RISE OF NATIONS – OFFENE PRÄZISIONSFRAGEN NACH DEM VOLLDURCHLAUF
+
+Diese Punkte verhindern nicht den 289/289-Erstcheck; sie sind Ziele für den späteren JAR-/Config-Audit.
+
+1. Cosmetic Corpse Compat 1.0.0: Corpse ist Required Content, aber in der gelieferten Inventarliste nicht als eigenes Dossier vorhanden.
+2. Create DnD Bore Block Fix 1.0.0: Create: Dreams & Desires ist Required Content, aber in der gelieferten Inventarliste nicht als eigenes Dossier vorhanden.
+3. I Architecture 0.1.1b: Release nennt Port auf Create 6.0.8; Pack läuft auf Create 6.0.10. Laufzeittest empfohlen.
+4. LMFT 1.1.1: Funktion/Version mit 1.21.1-Kompatibilität verifiziert, exakter Pack-JAR-Dateiname erst mit mods-Ordner sicher.
+5. Für viele Contentmods bleiben Registrylisten, Recipes, Loot/Spawn-Werte, Damage/Speed/Range und Configdefaults bewusst offen, bis JARs/Configs vorliegen.

@@ -1,0 +1,39 @@
+RISE OF NATIONS – WIKI RESEARCH BATCH 05
+Datum: 2026-09-22
+
+Schwerpunkt:
+- weitere Create/Aeronautics/CBC-Komponenten
+- Performance-/Library-Infrastruktur
+- exakte 1.21.1/NeoForge-Versionen
+- dokumentierte Server-/Compatibility-Risiken
+
+Neu vertieft:
+- AeroCopycats
+- AeroWorks
+- CBC AT
+- Copycats
+- Create Dimension
+- Create Factory
+- Create Ice Creams
+- Create Submarine
+- Create Winery
+- Create Threaded Trains
+- AppleSkin
+- AllTheLeaks
+- Architectury
+- Cloth Config
+- FerriteCore
+- ImmediatelyFast
+- Curios
+- Kotlin for Forge
+
+Besondere Befunde:
+- AeroCopycats 1.1.1 ergänzt kpg/Massedaten für Copycats+-Blöcke in Sable/Create Aeronautics.
+- Create Deep Seas/Submarine 2.2.4 ist ein Dedicated-Server-Fixrelease und behebt mehrere serverkritische Crashes.
+- Create Threaded Trains 1.0.0 verschiebt Railway-Berechnungen auf einen separaten Thread; Autor warnt vor möglichen Konflikten mit nicht thread-sicheren Train-Addons.
+- CBC:AT 0.1.4c nennt CBC 5.11.3-Kompatibilitätsfixes; Rise of Nations nutzt CBC 5.11.7, daher Packtest erforderlich.
+- AllTheLeaks 1.1.10 enthält explizite Fixes für Supplementaries und JEI.
+- Curios 9.5.1 ist die Accessory-Slot-API; standardmäßig werden Slots nur on-demand durch andere Mods angelegt.
+
+Qualitätsregel:
+Versionsfremde Werte oder neuere Projektfeatures werden nicht ungeprüft auf die Packversion übertragen.

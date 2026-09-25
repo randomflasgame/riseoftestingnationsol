@@ -1,0 +1,44 @@
+RISE OF NATIONS – WIKI RESEARCH BATCH 10
+Datum: 2026-09-23
+
+Schwerpunkt:
+- Warfare / Superb Warfare Addons
+- Economy / Taxes / Currency
+- Serverdiagnose / Crash Recovery / Worldgen Performance
+- Client Animation / Rendering QoL
+- wichtige Libraries und Farming Utility
+
+Neu vertieft:
+- AeroWarfare Compat
+- Armor Expanded Modernity
+- Historical Armors
+- Modular Golems
+- Musket Mod
+- SBW Configure
+- SBW EW Addon
+- Taxes
+- YCurrency
+- Spark
+- Structure Essentials
+- Neruina
+- Smooth Chunk
+- Not Enough Animations
+- Skin Layers 3D
+- Right Click Harvest
+- Puzzles Lib
+- U Team Core
+
+Besondere Befunde:
+- AeroWarfare Compat 1.15.0 koppelt physikalischen Impuls nun an die Masse von Sable-Objekten.
+- Armor Expanded: Modernity 1.0.0 enthält 5 Armor-Sets, Flags/Cosmetics sowie funktionale NVG/Face-Shield-Komponenten.
+- Modular Golems 3.1.42 behebt JEI Add-Slot-Smithing-Display und Ranged-Mob-Melee-Switching.
+- SBW Configure 0.0.1 kann u.a. Heat-Sync, Weapon Perks, Headshots, Helicopter-Autoland-Search und Vehicle Damage Modifiers konfigurieren.
+- SBW Electronic Warfare 1.0.4 ist die Packversion; neuere 1.1.x-Features werden nicht automatisch als Packinhalt ausgegeben.
+- YCurrency 2.1.0 dokumentiert einen noch offenen Create-Recipe-Bug auf 1.21.1.
+- Structure Essentials 5.0 liefert Structure-Suche, Timeouts, Biomecompat, Overlap-Schutz und konkrete Diagnosecommands.
+- Neruina dokumentiert einen Default-Threshold von 10 Ticking Exceptions innerhalb von 5 Minuten.
+- RightClickHarvest 4.6.1 benötigt auf NeoForge JamLib und Architectury API.
+
+Qualitätsregel:
+Spätere Versionen dienen nur dann als Kontextquelle, wenn klar zwischen generischem System und Packversion getrennt wird.
+Zahlen/Configs/Mechaniken werden nicht aus anderen Versionen als sichere Packwerte ausgegeben.

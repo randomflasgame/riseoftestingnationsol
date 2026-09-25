@@ -1,0 +1,43 @@
+RISE OF NATIONS – WIKI RESEARCH BATCH 11
+Datum: 2026-09-23
+
+Schwerpunkt:
+- zentrale Libraries und Config-Systeme
+- Structure-/Biome-APIs
+- Skill-Framework
+- Maid-AI
+- Client-Kamera-QoL
+
+Neu vertieft:
+- BaguetteLib
+- Bagus Lib
+- Blueprint
+- Cristel Lib
+- Fzzy Config
+- FLib
+- GottschCore
+- Integrated API
+- JamLib
+- Jupiter
+- L2 Library
+- TerraBlender
+- Uranus
+- Zeta
+- Nether Portal Fix
+- Puffish Skills
+- Touhou Little Maid
+- Better Third Person
+
+Besondere Befunde:
+- Blueprint 8.1.1 behebt ausdrücklich einen World-Creation-Hänger mit ModernFix; beide Mods sind im Pack.
+- Integrated API 1.8.0 stellt u.a. Create-Contraption-Kompatibilität, Conditional Block Replacement und einen erweiterten Structure/Jigsaw-Stack bereit.
+- Uranus 2.4.1 nennt einen Capability-Fix mit Sable; Sable 2.0.3 ist im Pack.
+- L2 Library 3.0.8 listet Curios und GeckoLib als optionale Dependencies; beide sind im Pack.
+- Puffish Skills 0.18.3 ist nur das Framework. In der gelieferten Modliste wurde kein separates Default-Skill-Tree-Mod gefunden; echte Rise-of-Nations-Skilltrees müssen aus Datapacks/Configs geprüft werden.
+- Touhou Little Maid 1.5.3 nutzt ein Work-Mode-/Brain-AI-System; Create Treadmill besitzt eine konkrete Maid-Integration.
+- NetherPortalFix 21.1.1 ist serverseitig und benötigt Balm.
+- Better Third Person 1.9.0 ist rein clientseitig.
+
+Qualitätsregel:
+Libraries erhalten keine erfundene Spielerprogression. Skillwerte, Configdefaults, Registrylisten und
+Pack-spezifische Datapacks bleiben offen, bis die tatsächlichen Dateien aus Rise of Nations geprüft sind.

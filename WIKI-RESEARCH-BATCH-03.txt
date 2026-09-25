@@ -1,0 +1,38 @@
+RISE OF NATIONS – WIKI RESEARCH BATCH 03
+Datum: 2026-09-22
+
+Ziel dieses Batches:
+- sämtliche noch offenen P0/P1-Dossiers auf mindestens teilweise verifizierten Stand bringen
+- genaue Packversionen gegen aktuelle Primär-/Projektquellen prüfen
+- keine versionsfremden Zahlen als Packfakten übernehmen
+
+Neu bearbeitet:
+- Alex’s Mobs
+- AllTheModium
+- Aquaculture
+- Artifacts
+- Automobility
+- Farmer’s Delight
+- Jade
+- JourneyMap
+- L_Ender’s Cataclysm
+- Mowzie’s Mobs
+- Naturalist
+- Refurbished Furniture
+- Serene Seasons
+- Sophisticated Backpacks
+- Sophisticated Storage
+- The Undergarden
+- Simple Voice Chat
+
+Wichtige Befunde:
+- JourneyMap 6.0.2 NeoForge verlangt mindestens NeoForge 21.1.228; das Pack nutzt 21.1.248.
+- Simple Voice Chat 2.6.22: offizieller Default-Port 24454/UDP; Default-Sprachreichweite 48, Whisper 24.
+- Automobility ist in der Packliste nur als 0.5.0 geführt; offizielle NeoForge-1.21.1-Dateien besitzen Unterbuchstaben (0.5.0.c/e/f/g/h). Exakte Subversion bleibt offen.
+- Alex's Mobs 1.22.17 ist der inoffizielle NeoForge-1.21.1-Port und verlangt Citadel (Unofficial Port).
+- Refurbished Furniture 1.0.22 verlangt Framework und dokumentiert 440+ Funktions-/Dekoblöcke sowie Electricity, Mail und Computer.
+- Serene Seasons 10.1.0.3 ist exakt bestätigt; tatsächliche Crop-Fertility-Regeln können serverconfigabhängig sein.
+- Sophisticated Backpacks/Storage-Packversionen sind exakt bestätigt; Slotzahlen/Upgrade-Limits bleiben bis zur Packconfig-Prüfung offen.
+
+Qualitätsregel:
+Unverifizierte Statistiken, Spawnraten, Rezepte, Materialwerte, Slotzahlen und Configdefaults werden weiterhin nicht erfunden.

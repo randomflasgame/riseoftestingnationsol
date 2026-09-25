@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOD-DOSSIER // RISE OF NATIONS</title>
+<link rel="stylesheet" href="../style.css">
+<script src="../config/site-config.js"></script>
+</head>
+<body>
+<header class="ron-header">
+  <a href="../index.html" class="ron-brand">RISE OF NATIONS<span>COMMAND NETWORK</span></a>
+  <nav class="ron-nav" aria-label="Hauptnavigation">
+    <a href="../index.html">HOME / BEFEHLSZENTRALE</a>
+    <a href="communications.html">KOMMUNIKATION</a>
+    <a href="intelligence.html">LAGEZENTRUM</a>
+    <a href="server.html">SERVER</a>
+    <a href="database.html">DATENBANK</a>
+    <a href="download.html">DOWNLOAD</a>
+    <a class="active" href="wiki.html">WIKI</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+</header>
+
+<main class="wrap">
+<a class="btn secondary" href="wiki.html">← ZURÜCK ZUM WIKI-REGISTER</a>
+<section id="modHero" class="hero wiki-detail-hero"></section>
+<div id="modBody"></div>
+<div class="footer">RISE OF NATIONS // TECHNISCHES MOD-DOSSIER // QUELLENBEWUSST</div>
+</main>
+
+<script src="../data/wiki-data.js"></script>
+<script>
+(function(){
+  const data=window.RON_WIKI||[], params=new URLSearchParams(location.search), slug=params.get("mod");
+  const mod=data.find(x=>x.slug===slug);
+  const hero=document.getElementById("modHero"), body=document.getElementById("modBody");
+  function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));}
+  function list(items){
+    if(!items||!items.length)return '<p class="wiki-pending">Noch nicht versionsgenau verifiziert.</p>';
+    return '<ul class="wiki-tech-list">'+items.map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
+  }
+  function section(title,items,wide=false){
+    return `<section class="card wiki-section ${wide?'wide':''}"><div class="label">DOSSIER</div><h2>${esc(title)}</h2>${list(items)}</section>`;
+  }
+  if(!mod){
+    hero.innerHTML='<div class="eyebrow">DOSSIER NICHT GEFUNDEN</div><h1>404 // WIKI</h1><p>Der angeforderte Mod-Datensatz ist nicht vorhanden.</p>';
+    body.innerHTML='<div class="notice">Öffne das Wiki-Hauptregister und wähle dort ein vorhandenes Dossier.</div>';
+    return;
+  }
+  document.title=mod.name+" // RISE OF NATIONS WIKI";
+  hero.innerHTML=`<div class="eyebrow">${esc(mod.category)} // MOD-DOSSIER</div>
+    <h1>${esc(mod.name)}</h1>
+    <p>${esc(mod.summary)}</p>
+    <div class="wiki-meta-row">
+      <span class="tag">VERSION ${esc(mod.version)}</span>
+      <span class="tag">MC ${esc(mod.minecraftVersion)}</span>
+      <span class="tag">${esc(mod.loader)}</span>
+      <span class="wiki-status ${mod.researchStatus.startsWith('TEIL')?'partial':'open'}">${esc(mod.researchStatus)}</span>
+    </div>`;
+
+  const notes=(mod.notes||[]).length?`<div class="notice">${mod.notes.map(esc).join("<br>")}</div>`:"";
+  const sources=(mod.sources||[]).length
+    ? `<section class="card wiki-section wide"><div class="label">PRIMÄR-/AUTORENQUELLEN</div><h2>QUELLEN & VERSIONSSICHERHEIT</h2>
+       <div class="wiki-source-list">${mod.sources.map(s=>`<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer"><strong>${esc(s.label)}</strong><span>${esc(s.note||"")}</span></a>`).join("")}</div></section>`
+    : `<section class="card wiki-section wide"><div class="label">QUELLEN</div><h2>QUELLENLAGE</h2><p class="wiki-pending">Für dieses Dossier ist im aktuellen Forschungsbestand noch keine eindeutige versionsgenaue Primärquelle hinterlegt.</p></section>`;
+
+  body.innerHTML=`${notes}
+    <section class="grid three wiki-dossier-summary">
+      <div class="card"><div class="label">FORSCHUNGSSTATUS</div><div class="value">${esc(mod.researchStatus)}</div></div>
+      <div class="card"><div class="label">VERTRAUEN</div><p>${esc(mod.confidence)}</p></div>
+      <div class="card"><div class="label">PACK-PRIORITÄT</div><div class="value">${esc(mod.priority)}</div></div>
+    </section>
+    <div class="wiki-detail-grid">
+      ${section("ANFÄNGER-SCHNELLEINSTIEG",mod.beginner)}
+      ${section("ABHÄNGIGKEITEN",mod.dependencies)}
+      ${section("ERSTE SCHRITTE",mod.firstSteps)}
+      ${section("KERNMECHANIKEN",mod.coreMechanics)}
+      ${section("ITEMS / BLÖCKE / ENTITÄTEN",mod.itemsBlocksEntities)}
+      ${section("REZEPTE / HERSTELLUNG",mod.recipes)}
+      ${section("GUI / KEYBINDS",mod.guiKeybinds)}
+      ${section("AUTOMATISIERUNG",mod.automation)}
+      ${section("TECHNISCHE WERTE",mod.technicalValues)}
+      ${section("ENERGIE / STRESS / LEISTUNG",mod.energyStressPower)}
+      ${section("FORMELN / BERECHNUNGEN",mod.formulas)}
+      ${section("CONFIG / COMMANDS",mod.configurationCommands)}
+      ${section("MULTIPLAYER / SERVER",mod.multiplayerServer)}
+      ${section("PACK-INTEGRATIONEN",mod.packIntegrations)}
+      ${section("BEKANNTE ISSUES / BESONDERHEITEN",mod.knownIssues)}
+      ${section("FORTGESCHRITTENE BEISPIELE",mod.advancedExamples)}
+      ${section("PERFORMANCE-HINWEISE",mod.performanceNotes)}
+      ${sources}
+    </div>`;
+})();
+</script>
+</body>
+</html>
